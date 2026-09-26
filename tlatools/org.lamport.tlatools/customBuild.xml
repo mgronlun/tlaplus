@@ -1608,6 +1608,15 @@
 		</jbmc>
 
 		<jbmc>
+			<arg value="tlc2.value.impl.FcnLambdaValueHarness.verify:(III[I)V" />
+			<!-- Bound the values array to three entries; four unwindings include the loop exit check. -->
+			<arg value="--max-nondet-array-length" />
+			<arg value="3" />
+			<arg value="--unwind" />
+			<arg value="4" />
+		</jbmc>
+
+		<jbmc>
 			<arg value="tlc2.module.TLCHarness.verify:(IIIII)V" />
 			<!-- Three elements per domain need four unwindings, including the loop exit check. -->
 			<arg value="--unwind" />
